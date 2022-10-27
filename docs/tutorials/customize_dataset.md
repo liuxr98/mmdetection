@@ -71,7 +71,7 @@ data = dict(
     val=dict(
         type=dataset_type,
         classes=classes,
-        ann_file='path/to/your/val/data',
+        ann_file='path/to/your/test/data',
         ...),
     test=dict(
         type=dataset_type,

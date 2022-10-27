@@ -298,7 +298,7 @@ class LVISV05Dataset(CocoDataset):
             info = self.coco.load_imgs([i])[0]
             if info['file_name'].startswith('COCO'):
                 # Convert form the COCO 2014 file naming convention of
-                # COCO_[train/val/test]2014_000000000000.jpg to the 2017
+                # COCO_[train/test/test]2014_000000000000.jpg to the 2017
                 # naming convention of 000000000000.jpg
                 # (LVIS v1 will fix this naming issue)
                 info['filename'] = info['file_name'][-16:]
@@ -737,7 +737,7 @@ class LVISV1Dataset(LVISDataset):
             info = self.coco.load_imgs([i])[0]
             # coco_url is used in LVISv1 instead of file_name
             # e.g. http://images.cocodataset.org/train2017/000000391895.jpg
-            # train/val split in specified in url
+            # train/test split in specified in url
             info['filename'] = info['coco_url'].replace(
                 'http://images.cocodataset.org/', '')
             data_infos.append(info)

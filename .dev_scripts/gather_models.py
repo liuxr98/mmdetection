@@ -56,7 +56,7 @@ def get_final_results(log_json_path, epoch):
             if log_line['mode'] == 'train' and log_line['epoch'] == epoch:
                 result_dict['memory'] = log_line['memory']
 
-            if log_line['mode'] == 'val' and log_line['epoch'] == epoch:
+            if log_line['mode'] == 'test' and log_line['epoch'] == epoch:
                 result_dict.update({
                     key: log_line[key]
                     for key in RESULTS_LUT if key in log_line

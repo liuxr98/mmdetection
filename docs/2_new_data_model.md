@@ -230,13 +230,13 @@ data = dict(
         classes=classes,
         ann_file='balloon/train/annotation_coco.json'),
     val=dict(
-        img_prefix='balloon/val/',
+        img_prefix='balloon/test/',
         classes=classes,
-        ann_file='balloon/val/annotation_coco.json'),
+        ann_file='balloon/test/annotation_coco.json'),
     test=dict(
-        img_prefix='balloon/val/',
+        img_prefix='balloon/test/',
         classes=classes,
-        ann_file='balloon/val/annotation_coco.json'))
+        ann_file='balloon/test/annotation_coco.json'))
 
 # We can use the pre-trained Mask RCNN model to obtain higher performance
 load_from = 'checkpoints/mask_rcnn_r50_caffe_fpn_mstrain-poly_3x_coco_bbox_mAP-0.408__segm_mAP-0.37_20200504_163245-42aa3d00.pth'

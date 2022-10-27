@@ -122,7 +122,7 @@ def main():
             prefix = 'voc12'
         elif year == ['2007', '2012']:
             prefix = 'voc0712'
-        for split in ['train', 'val', 'trainval']:
+        for split in ['train', 'test', 'trainval']:
             dataset_name = prefix + '_' + split
             print(f'processing {dataset_name} ...')
             cvt_annotations(devkit_path, year, split,

@@ -171,7 +171,7 @@ Sometimes user may want to check some metrics (e.g. loss, accuracy) about the mo
 In such case, we can set the workflow as
 
 ```python
-[('train', 1), ('val', 1)]
+[('train', 1), ('test', 1)]
 ```
 
 so that 1 epoch for training and 1 epoch for validation will be run iteratively.

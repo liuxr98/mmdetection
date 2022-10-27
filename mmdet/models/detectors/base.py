@@ -255,7 +255,7 @@ class BaseDetector(nn.Module, metaclass=ABCMeta):
         """The iteration step during validation.
 
         This method shares the same signature as :func:`train_step`, but used
-        during val epochs. Note that the evaluation after training epochs is
+        during test epochs. Note that the evaluation after training epochs is
         not implemented with this method, but an evaluation hook.
         """
         losses = self(**data)
