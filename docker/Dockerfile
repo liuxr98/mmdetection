@@ -20,7 +20,7 @@ RUN rm /etc/apt/sources.list \
     && apt-get update \
     && apt-get upgrade -y
 
-RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 \
+RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 wget\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
