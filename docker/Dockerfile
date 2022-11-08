@@ -44,7 +44,10 @@ RUN conda install jupyter -y -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/pk
     && echo "c.NotebookApp.ip='*'" >> ~/.jupyter/jupyter_notebook_config.py \
     && echo "c.NotebookApp.password=''" >> ~/.jupyter/jupyter_notebook_config.py \
     && conda clean -a -y
-    
+
+RUN pip install --no-cache-dir jupyter_contrib_nbextensions -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    && jupyter contrib nbextension install --user
+
 RUN mkdir -p /workdir
 WORKDIR /workdir
 
